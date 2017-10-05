@@ -28,3 +28,11 @@ class Tile
     end
   end
 end
+
+
+# tile = Tile.new(0)
+# p tile.color
+# p tile.given?
+# p tile.to_s
+# p tile.value=(5)
+# p tile.value == 5

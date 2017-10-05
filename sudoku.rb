@@ -1,3 +1,5 @@
+require 'colorize'
+
 class Board
   def self.empty_grid
     Array.new(9) do
@@ -109,6 +111,8 @@ class Tile
       @value = new_value
     end
   end
+end
+
 
 class SudokuGame
   def self.from_file(filename)
@@ -126,7 +130,9 @@ class SudokuGame
       puts "Please enter a position on the board (e.g., '3,4')"
       print "> "
 
+
       begin
+
         pos = parse_pos(gets.chomp)
       rescue
         puts "Invalid position entered (did you use a comma?)"

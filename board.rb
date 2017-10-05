@@ -24,6 +24,7 @@ class Board
   end
 
   def [](pos)
+
     x, y = pos
     grid[x][y]
   end
@@ -50,7 +51,9 @@ class Board
     grid.size
   end
 
-  alias_method :rows, :size
+  def rows
+    grid
+  end
 
   def solved?
     rows.all? { |row| solved_set?(row) } &&
